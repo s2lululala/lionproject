@@ -20,4 +20,4 @@ jobs:
      - name: Docker Push
        run: |
          docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-         docker push ${{ secrets.DOCKER_USERNAME }}/my-app
+         docker push ${{ secrets.DOCKER_USERNAME }}/django-app
