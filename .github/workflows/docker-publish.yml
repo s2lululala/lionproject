@@ -15,6 +15,7 @@ jobs:
      - uses: actions/checkout@v2
 
      - name: Docker Build
+       file: ../Dockerfile
        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/django-app .
 
      - name: Docker Push
