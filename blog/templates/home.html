@@ -4,7 +4,7 @@
     {% if user.is_authenticated %}
     {{user.location}}에 사는 {{user.university}} 다니는 {{user.nickname}}님 안녕!
     {% endif %}
-    <a href="?search=true&writer={{user.nickname}}">내가 쓴 글</a>
+    <a href="?search=true&author={{user.nickname}}">내가 쓴 글</a>
         <h1>Blog Project</h1>
         <div class="container">
         {% for blog in blogs %}

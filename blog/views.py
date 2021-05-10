@@ -10,8 +10,8 @@ def home(request):
     # blogs = Blog.objects.all()
     search = request.GET.get('search')
     if search == 'true':
-        author = request.GET.get('writer')
-        blogs = Blog.object.filter(writer=author)
+        author = request.GET.get('author')
+        blogs = Blog.objects.filter(writer=author)
         return render(request, 'home.html', {'blogs':blogs})
 
     paginator = Paginator(blogs, 3)
