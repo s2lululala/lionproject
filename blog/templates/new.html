@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Write Your Blog</h1>
+
+<form action="{%url 'create'%}" method="post" enctype="multipart/form-data">
+    {%csrf_token%}
+    <!-- csrf공격을 막기 위해 써야됨 -->
+    {{form.as_p}}
+    <!-- <p>Title:<input type="text" name="title"></p>
+    <p>Writer:<input type="text" name="writer"></p>
+    <p>Image:<input type = "file" name = "image"></p>
+    Body:<textarea name="body" id="" cols="30" rows="10"></textarea> -->
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}
